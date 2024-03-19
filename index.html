@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milu Tamagotchi</title>
+	
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="main_container">
+		<h2>Milu Tamagotchi ♥</h2>
+		<h6>V 0.1</h6>
+		<div class="tamagochi_container">
+			<div class="display_container">
+				<div class="milu_display" id='milu_display'>
+					<img  id="pet_image" class="animation_pet_standby" src="./images/milu_tikita.png" alt="Milu Mascotita">
+					<div id="stats_menu">
+						<p>Hambre: <span id="pet_hungry">0</span></p>
+						<p>Felicidad: <span id="pet_joy">0</span></p>
+						<p>Nivel: <span id="pet_level">0</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="buttons_container">
+			<button id='btn_eat'>COMER</button>
+			<button id='btn_play'>JUGAR</button>
+			<button id='btn_stats'>ESTADO</button>
+		</div>
+		<br>
+		<h5 id="show_patch_notes">Patch Notes:</h5>
+		<article id="patch_notes_section">
+				<p class="patch_notes_titles">v 0.1 -- 13/03/2024</p>
+				<li>Initial Structure (HTML+CSS+JS)</li>
+				<li>Adding logic of stats and levels</li>
+				<li>Adding a "Patch Notes" for have a visual updates log</li>
+				<li>First upload to GitHub</li>
+		</article>
+	</div> 
+
+<script src="code.js"></script>  
+</body>
+</html>

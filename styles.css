@@ -39,32 +39,67 @@ body {
 
 #pet_image {
 	position: absolute;
-	animation: pet_eating 5s infinite;
+	/* animation: pet_standby 7s infinite; */
+	visibility: visible;
 }
 
+
+
+#stats_menu {
+	visibility: hidden;
+	text-align: center;
+}
 /* ANIMATIONS 				-------------------------------*/
+.animation_pet_standby {
+	animation-name: pet_standby;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+}
+
+.animation_pet_eating {
+	animation-name: pet_eating;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+}
+
+.animation_pet_playing {
+	animation-name: pet_playing;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
 @keyframes pet_standby {
             0% {
                 transform: translateX(0) scaleX(1);
             }
-            20% {
+            15% {
                 transform: translateX(100px) scaleX(1);
             }
-            40% {
+            30% {
                 transform: translateX(100px) scaleX(-1);
+            }
+            45% {
+            	transform: translateX(0) scaleX(-1);
             }
             60% {
                 transform: translateX(-100px) scaleX(-1);
             }
-            80% {
+            75% {
                 transform: translateX(-100px) scaleX(1);
             }
-            100% {
+            90% {
             	transform: translateX(0) scaleX(1);
             }
 }
 
 @keyframes pet_eating {
+	0%, 100% { transform: translateY(0); } 
+    30% { transform: translateY(-30px); } 
+    60% { transform: translateY(0); } 
+    80% { transform: translateY(-15px); } 
+    100% { transform: translateY(0); } 
+}
+
+@keyframes pet_playing {
 	        0% {
                 transform: rotate(-20deg);
             }
@@ -85,10 +120,6 @@ body {
             }
 }
 
-@keyframes pet_playing {
-	0% { opacity: : 0 }
-	100% { visibility: 100 }
-}
 
 
 /* BUTTONS OPTIONS			------------------------------- */

@@ -24,7 +24,7 @@ const change_to_standby = () => {
 	stats_menu.style.visibility = 'hidden';
 	remove_animation();
 	pet_image.classList.add('animation_pet_standby');
-	pet_image.src = './images/milu_tikita.png'
+	pet_image.src = './images/milu_feliz.png'
 	
 
 	console.log('Switch Milu to standby animation');
@@ -37,7 +37,7 @@ const remove_animation = () => {
 }
 
 const milu_eat = () => {
-	pet_image.src = './images/milu_comiendo.png';
+	pet_image.src = './images/milu_boca_abierta.png';
 	remove_animation();
 	pet_image.classList.add('animation_pet_eating');
 	pet.hungry--;
@@ -47,7 +47,7 @@ const milu_eat = () => {
 };
 
 const milu_plays = () => {
-	pet_image.src = './images/milu_jugando.png'
+	pet_image.src = './images/milu_frente.png'
 	remove_animation();
 	pet_image.classList.add('animation_pet_playing');
 	pet.joy++;

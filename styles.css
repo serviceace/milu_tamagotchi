@@ -17,6 +17,7 @@ body {
 }
 
 .tamagochi_container {
+	background-image: url(./images/Gen1BG.jpeg);
 	display: flex;
 	width: 300px;
 	height: 300px;
@@ -42,8 +43,6 @@ body {
 	/* animation: pet_standby 7s infinite; */
 	visibility: visible;
 }
-
-
 
 #stats_menu {
 	visibility: hidden;

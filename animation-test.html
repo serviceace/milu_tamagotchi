@@ -31,8 +31,46 @@
 .milu_display {
 	width: 150px;
 	height: 170px;
-	position: relative;
+	position: absolute;
+	/* animation: blink 0.5s infinite; */
 }
+#pet_image {
+	width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 83px;
+	position: relative;
+	animation: moveAndBlink 1s infinite infinite;
+}
+
+@keyframes moveAndBlink {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+@keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        25% {
+        	opacity: 0;
+        }
+        50% {
+        	opacity: 1;	
+        }
+        100% {
+            opacity: 0;
+        }
+}
+
+
 </style>
 <body>
 
@@ -40,7 +78,7 @@
 	<div class="tamagochi_container">
 		<div>
 			<div class="milu_display">
-				<img class="animation_pet_standby" src="./images/milu_feliz.png">
+				<img id="pet_image" class="animation_pet_standby" src="./images/milu_feliz.png">
 			</div>
 		</div>
 	</div>

@@ -7,6 +7,9 @@ const pet_level = document.querySelector('#pet_level');
 const btn_eat = document.querySelector('#btn_eat');
 const btn_play = document.querySelector('#btn_play');
 const btn_stats = document.querySelector('#btn_stats');
+const item_cake = document.querySelector('#item_cake');
+const play_sword = document.querySelector('#play_sword');
+const play_gameboy = document.querySelector('#play_gameboy');
 
 // Pet Object		--------------------------------------------------
 
@@ -23,6 +26,7 @@ const change_to_standby = () => {
 	pet_image.style.visibility = 'visible';
 	stats_menu.style.visibility = 'hidden';
 	remove_animation();
+	remove_item();
 	pet_image.classList.add('animation_pet_standby');
 	pet_image.src = './images/milu_feliz.png'
 	
@@ -36,7 +40,14 @@ const remove_animation = () => {
 	pet_image.classList.remove('animation_pet_playing');
 }
 
+const remove_item = () => {
+	item_cake.style.visibility = 'hidden';
+	play_sword.style.visibility = 'hidden';
+	play_gameboy.style.visibility = 'hidden';
+}
+
 const milu_eat = () => {
+	item_cake.style.visibility = 'visible';
 	pet_image.src = './images/milu_boca_abierta.png';
 	remove_animation();
 	pet_image.classList.add('animation_pet_eating');
@@ -47,6 +58,8 @@ const milu_eat = () => {
 };
 
 const milu_plays = () => {
+	play_sword.style.visibility = 'visible';
+	play_gameboy.style.visibility = 'visible';
 	pet_image.src = './images/milu_frente.png'
 	remove_animation();
 	pet_image.classList.add('animation_pet_playing');

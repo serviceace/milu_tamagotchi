@@ -11,7 +11,7 @@
 <body>
 	<div class="main_container">
 		<h2>Milu Tamagotchi ♥</h2>
-		<h6>V 0.1</h6>
+		<h6>V 0.2</h6>
 		<div class="tamagochi_container">
 			<div class="display_container">
 				<div class="milu_display" id='milu_display'>
@@ -20,6 +20,21 @@
 						<p>Hambre: <span id="pet_hungry">0</span></p>
 						<p>Felicidad: <span id="pet_joy">0</span></p>
 						<p>Nivel: <span id="pet_level">0</span></p>
+					</div>
+					<div id="items_container">
+						<div id="food_items">
+							<div id="item_cake">
+								<img src="./images/food_cake.jpg">
+							</div>
+						</div>
+						<div id="play_items">
+							<div id="play_sword">
+								<img src="./images/play_sword.jpeg">
+							</div>
+							<div id="play_gameboy">
+								<img src="./images/play_gameboy.jpeg">
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -32,6 +47,11 @@
 		<br>
 		<h5 id="show_patch_notes">Patch Notes:</h5>
 		<article id="patch_notes_section">
+				<p class="patch_notes_titles">v 0.2 -- 01/04/2024</p>
+				<li>Changin placeholders images for Milu Tamagotchi Sprites</li>
+				<li>Adding a hidden items container for animation's companion</li>
+				<li>Added a temporary background for the display</li>
+				<hr>
 				<p class="patch_notes_titles">v 0.1 -- 13/03/2024</p>
 				<li>Initial Structure (HTML+CSS+JS)</li>
 				<li>Adding logic of stats and levels</li>

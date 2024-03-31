@@ -19,8 +19,8 @@ body {
 .tamagochi_container {
 	background-image: url(./images/Gen1BG.jpeg);
 	display: flex;
-	width: 300px;
-	height: 300px;
+	width: 330px;
+	height: 312px;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
@@ -28,6 +28,7 @@ body {
 	margin-top: 5%;
 	border-radius: 12px;
 	overflow: hidden; 
+	background-size: contain;
 }
 
 
@@ -40,54 +41,110 @@ body {
 
 #pet_image {
 	position: absolute;
-	/* animation: pet_standby 7s infinite; */
+	top: -30px;
 	visibility: visible;
 }
 
 #stats_menu {
 	visibility: hidden;
 	text-align: center;
+	color: black;
 }
+
+/* ITEMS DISPLAY 				-------------------------------*/
+
+#item_cake {
+	visibility: hidden;
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: -20px;
+	left: -50px;
+}
+#item_cake img {
+	border-radius: 50%;
+}
+
+#play_sword {
+	visibility: hidden;
+	width: 50px;
+	position: absolute;
+	top: -20px;
+	left: -50px;
+	animation-name: pet_playing;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(2, end);
+}
+#play_gameboy {
+	visibility: hidden;
+	width: 50px;
+	position: absolute;
+	top: -20px;
+	left: 150px;
+	animation-name: pet_playing;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(2, end);
+}
+
 /* ANIMATIONS 				-------------------------------*/
 .animation_pet_standby {
 	animation-name: pet_standby;
-	animation-duration: 8s;
+	animation-duration: 10s;
 	animation-iteration-count: infinite;
+	animation-timing-function: steps(4, end);
 }
 
 .animation_pet_eating {
 	animation-name: pet_eating;
 	animation-duration: 1.5s;
 	animation-iteration-count: infinite;
+	animation-timing-function: steps(2, end);
 }
 
 .animation_pet_playing {
 	animation-name: pet_playing;
 	animation-duration: 3s;
 	animation-iteration-count: infinite;
+	animation-timing-function: steps(2, end);
 }
 @keyframes pet_standby {
-            0% {
-                transform: translateX(0) scaleX(1);
-            }
-            15% {
-                transform: translateX(100px) scaleX(1);
-            }
-            30% {
-                transform: translateX(100px) scaleX(-1);
-            }
-            45% {
-            	transform: translateX(0) scaleX(-1);
-            }
-            60% {
-                transform: translateX(-100px) scaleX(-1);
-            }
-            75% {
-                transform: translateX(-100px) scaleX(1);
-            }
-            90% {
-            	transform: translateX(0) scaleX(1);
-            }
+	0% {
+		transform: translateX(0px);
+	}
+	20% {
+		transform: translateX(-100px) scaleX(1);
+		opacity: 1;
+	}
+	21% {
+		transform: translateX(-100px) scaleX(-1);
+		opacity: 0;
+	}
+	22% {
+		opacity: 1;
+	}
+	40% {
+		transform: translateX(0px) scaleX(-1);
+	}
+	60% {
+		transform: translateX(100px) scaleX(-1);
+		opacity: 1;
+	}
+	61% {
+		transform: translateX(100px) scaleX(1);
+		opacity: 0;
+	}
+	62% {
+		opacity: 1;
+	}
+	80% {
+		transform: translateX(0px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+
 }
 
 @keyframes pet_eating {

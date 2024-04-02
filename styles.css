@@ -19,8 +19,8 @@ body {
 .tamagochi_container {
 	background-image: url(./images/Gen1BG.jpeg);
 	display: flex;
-	width: 330px;
-	height: 312px;
+	width: 300px;
+	height: 300px;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
@@ -32,12 +32,12 @@ body {
 }
 
 
-/* TOP MENU  ------------------------------------ */
+/* MENU OPTIONS ------------------------------------ */
 #top_menu {
 	display: flex;
 	width: 300px;
 	position: absolute;
-	top: -65px;
+	top: -60px;
 	left: -75px;
 	flex-direction: row;
 	justify-content: space-around;
@@ -45,12 +45,23 @@ body {
 .top_item {
 	width: 2rem;
 }
+.hidden {
+	visibility: hidden;
+}
+.visible {
+	visibility: visible;
+}
+.icon {
+	list-style-type: none;
+}
+
+
 
 #bottom_menu {
 	display: flex;
 	width: 300px;
 	position: absolute;
-	top: 160px;
+	top: 170px;
 	left: -75px;
 	flex-direction: row;
 	justify-content: space-around;
@@ -59,8 +70,6 @@ body {
 .bottom_item {
 	width: 2.7rem;
 }
-
-
 
 /* PET DISPLAY				-------------------------------*/
 .milu_display {
@@ -71,7 +80,7 @@ body {
 
 #pet_image {
 	position: absolute;
-	top: -30px;
+	top: -20px;
 	visibility: visible;
 }
 

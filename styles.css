@@ -32,6 +32,36 @@ body {
 }
 
 
+/* TOP MENU  ------------------------------------ */
+#top_menu {
+	display: flex;
+	width: 300px;
+	position: absolute;
+	top: -65px;
+	left: -75px;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.top_item {
+	width: 2rem;
+}
+
+#bottom_menu {
+	display: flex;
+	width: 300px;
+	position: absolute;
+	top: 160px;
+	left: -75px;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.bottom_item {
+	width: 2.7rem;
+}
+
+
+
 /* PET DISPLAY				-------------------------------*/
 .milu_display {
 	width: 150px;

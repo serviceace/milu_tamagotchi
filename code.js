@@ -10,7 +10,6 @@ const btn_stats = document.querySelector('#btn_stats');
 const item_cake = document.querySelector('#item_cake');
 const play_sword = document.querySelector('#play_sword');
 const play_gameboy = document.querySelector('#play_gameboy');
-const btn_select = document.querySelector('#btn_select');
 const food_icon = document.querySelector('#food_icon');
 const lights_icon = document.querySelector('#lights_icon');
 const game_icon = document.querySelector('#game_icon');
@@ -18,6 +17,10 @@ const medicine_icon = document.querySelector('#medicine_icon');
 const bathroom_icon = document.querySelector('#bathroom_icon');
 const status_icon = document.querySelector('#status_icon');
 const training_icon = document.querySelector('#training_icon');
+const btn_accept = document.querySelector('#btn_accept');
+const btn_select = document.querySelector('#btn_select');
+const btn_cancel = document.querySelector('#btn_cancel');
+
 
 
 
@@ -173,24 +176,44 @@ const select_option =  () => {
 		}
 };
 
+const accept_selected_option = () => {
+	if (pet.menuOption == 1) {
+		console.log('Give it food');
+		milu_eat();
+		cheking_stats();
+	} else if (pet.menuOption == 2) {
+		console.log('ligths off/on');
+	} else if (pet.menuOption == 3) {
+		console.log('play a game');
+		milu_plays();
+		cheking_stats();
+	} else if (pet.menuOption == 4) {
+		console.log('Give Medicine');
+	} else if (pet.menuOption == 5) {
+		console.log('Take a bath');
+	} else if (pet.menuOption == 6) {
+		console.log('View status');
+		milu_status();
+	} else if (pet.menuOption == 7) {
+		console.log('Train Pet');
+	} else if (pet.menuOption >= 8 ) {
+		console.log('View time and years');
+		pet.menuOption = 0;
+	}
+};
+
 // BUTTONS ACTIONS		--------------------------------------------------
-btn_eat.addEventListener('click', (e) => {	
-	milu_eat();
-	cheking_stats(); 
-});
 
-btn_play.addEventListener('click', (e) => {
-	milu_plays();
-	cheking_stats();
-});
-
-btn_stats.addEventListener('click', (e) => {
-	milu_status();
-	
+btn_accept.addEventListener('click', (e) => {
+	accept_selected_option();
 });
 
 btn_select.addEventListener('click', (e) => {
 	select_option();
+});
+
+btn_cancel.addEventListener('click', (e) => {
+	console.log('cancel action');
 });
 
 // Others			--------------------------------------------------

@@ -19,8 +19,8 @@ body {
 .tamagochi_container {
 	background-image: url(./images/Gen1BG.jpeg);
 	display: flex;
-	width: 330px;
-	height: 312px;
+	width: 300px;
+	height: 300px;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
@@ -31,6 +31,42 @@ body {
 	background-size: contain;
 }
 
+/* MENU OPTIONS ------------------------------------ */
+#top_menu {
+	display: flex;
+	width: 300px;
+	position: absolute;
+	top: -60px;
+	left: -75px;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.top_item {
+	width: 2rem;
+}
+.hidden {
+	visibility: hidden;
+}
+.visible {
+	visibility: visible;
+}
+.icon {
+	list-style-type: none;
+}
+
+#bottom_menu {
+	display: flex;
+	width: 300px;
+	position: absolute;
+	top: 170px;
+	left: -75px;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.bottom_item {
+	width: 2.7rem;
+}
 
 /* PET DISPLAY				-------------------------------*/
 .milu_display {
@@ -41,7 +77,7 @@ body {
 
 #pet_image {
 	position: absolute;
-	top: -30px;
+	top: -20px;
 	visibility: visible;
 }
 
@@ -176,16 +212,23 @@ body {
             }
 }
 
+/* STATUS SECTION 			------------------------------- */
 
-
-/* BUTTONS OPTIONS			------------------------------- */
-.buttons_container{
-	margin: 3px; 
-}
 .stats_menu {
 	text-align: center;
 }
 
+/* BUTTONS OPTIONS			------------------------------- */
+.buttons_container{
+	margin: 3px;
+	display: flex;
+	flex-direction: row;
+}
+.btn_action {
+	border-radius: 45%;
+	padding: 10px 17px;
+	margin: 10px;
+}
 
 
 /* Patch Notes Section		------------------------------- */

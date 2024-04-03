@@ -11,15 +11,46 @@
 <body>
 	<div class="main_container">
 		<h2>Milu Tamagotchi ♥</h2>
-		<h6>V 0.2</h6>
+		<h6>V 0.3</h6>
 		<div class="tamagochi_container">
 			<div class="display_container">
 				<div class="milu_display" id='milu_display'>
+					<div id="top_menu">
+						<li class="icon">
+							<img id="food_icon" class="top_item hidden" src="./images/food_icon.webp">
+						</li>
+						<li class="icon">
+							<img id="lights_icon" class="top_item hidden" src="./images/lights_icon.webp">
+						</li>
+						<li class="icon">
+							<img id="game_icon" class="top_item hidden" src="./images/game_icon.webp">
+						</li>
+						<li class="icon">
+							<img id="medicine_icon" class="top_item hidden" src="./images/medicine_icon.webp">
+						</li>
+						
+						
+						
+					</div>
 					<img  id="pet_image" class="animation_pet_standby" src="./images/milu_feliz.png" alt="Milu Mascotita">
 					<div id="stats_menu">
 						<p>Hambre: <span id="pet_hungry">0</span></p>
 						<p>Felicidad: <span id="pet_joy">0</span></p>
 						<p>Nivel: <span id="pet_level">0</span></p>
+					</div>
+					<div id="bottom_menu">
+						<li class="icon">
+							<img id="bathroom_icon" class="bottom_item hidden" src="./images/bathroom_icon.webp">
+						</li>
+						<li class="icon">
+							<img id="status_icon" class="bottom_item hidden" src="./images/status_icon.webp">
+						</li>
+						<li class="icon">
+							<img id="training_icon" class="bottom_item hidden" src="./images/training_icon.webp">
+						</li>
+						<li class="icon">
+							<img id="attention_icon" class="bottom_item hidden" src="./images/attention_icon.webp">
+						</li>
 					</div>
 					<div id="items_container">
 						<div id="food_items">
@@ -40,13 +71,20 @@
 			</div>
 		</div>
 		<div class="buttons_container">
-			<button id='btn_eat'>COMER</button>
-			<button id='btn_play'>JUGAR</button>
-			<button id='btn_stats'>ESTADO</button>
+			<button id="btn_accept" class="btn_action">A</button>
+			<button id="btn_select" class="btn_action">B</button>
+			<button id="btn_cancel" class="btn_action">C</button>
 		</div>
 		<br>
 		<h5 id="show_patch_notes">Patch Notes:</h5>
 		<article id="patch_notes_section">
+				<p class="patch_notes_titles">v 0.3 -- 03/04/2024</p>
+				<li>Adding a new selectable menu for actions</li>
+				<li>Sprites for each 'icon menu' added</li>
+				<li>Adding the logic for menu option selection</li>
+				<li>Now is just three buttoms for actions. A(Accept) B(Select) C(Cancel)</li>
+				<li>Actions Avalible for now: Food, Play and Status.</li>
+				<hr>
 				<p class="patch_notes_titles">v 0.2 -- 01/04/2024</p>
 				<li>Changin placeholders images for Milu Tamagotchi Sprites</li>
 				<li>Adding a hidden items container for animation's companion</li>

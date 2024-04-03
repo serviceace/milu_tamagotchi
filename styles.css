@@ -31,7 +31,6 @@ body {
 	background-size: contain;
 }
 
-
 /* MENU OPTIONS ------------------------------------ */
 #top_menu {
 	display: flex;
@@ -54,8 +53,6 @@ body {
 .icon {
 	list-style-type: none;
 }
-
-
 
 #bottom_menu {
 	display: flex;
@@ -215,16 +212,23 @@ body {
             }
 }
 
+/* STATUS SECTION 			------------------------------- */
 
-
-/* BUTTONS OPTIONS			------------------------------- */
-.buttons_container{
-	margin: 3px; 
-}
 .stats_menu {
 	text-align: center;
 }
 
+/* BUTTONS OPTIONS			------------------------------- */
+.buttons_container{
+	margin: 3px;
+	display: flex;
+	flex-direction: row;
+}
+.btn_action {
+	border-radius: 45%;
+	padding: 10px 17px;
+	margin: 10px;
+}
 
 
 /* Patch Notes Section		------------------------------- */
